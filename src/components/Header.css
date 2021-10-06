@@ -1,6 +1,7 @@
 .header__logo{
-    width: 10em;
-    padding: 1em;
+    width: 6em;
+    height: 1.8em;
+    padding: 1em ;
 }
 .header{
     background-color: #131921;
