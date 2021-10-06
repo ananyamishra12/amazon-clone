@@ -1,5 +1,6 @@
 .header__logo{
     width: 10em;
+    padding: 1em;
 }
 .header{
     background-color: #131921;
