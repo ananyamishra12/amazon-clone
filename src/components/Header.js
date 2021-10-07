@@ -2,6 +2,8 @@ import React from 'react'
 import logo from '../images/amazon-logo.png'
 import "./Header.css"
 import {Link} from 'react-router-dom'
+
+import SearchIcon from '@mui/icons-material/Search';
 function Header() {
     return (
         <nav className="header">
@@ -13,8 +15,9 @@ function Header() {
             </Link>
             
             {/** search bar */}
+            div.header
             <input type="text" className= "header_searchInput"/>
-
+            <SearchIcon className="header__searchIcon"/>
             {/** three links */}
             {/** basket with a number */}
         </nav>
