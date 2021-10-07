@@ -13,11 +13,13 @@ function Header() {
                 alt="amazon logo"
                 />
             </Link>
-            
+                    
             {/** search bar */}
-            div.header
-            <input type="text" className= "header_searchInput"/>
-            <SearchIcon className="header__searchIcon"/>
+            <div className="header__search">
+               <input type="text" className= "header__searchInput"/>
+               <SearchIcon className="header__searchIcon"/>
+            </div>
+            
             {/** three links */}
             {/** basket with a number */}
         </nav>

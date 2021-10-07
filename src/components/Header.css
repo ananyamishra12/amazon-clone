@@ -2,7 +2,28 @@
     width: 6em;
     height: 1.8em;
     padding: 1em ;
+    object-fit: contain; /*always keeps the amazon logo's aspect ratio proper. it doesnt compress or elongate much*/
 }
 .header{
     background-color: #131921;
+    display: flex;
+    align-items: center;
+}
+
+.header__search{
+    display: flex;
+    flex-direction: row;
+    flex: 1; /*this div takes as much as position available*/
+}
+.header__searchInput{
+    height: 12px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    
+}
+.header__searchIcon{
+    background-color: #cd9042;
+    height: 22px !important;
+    padding: 5px;   
 }
