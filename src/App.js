@@ -8,9 +8,11 @@ function App(){
             <div className= "app">
                 <Switch>
                     <Route path="/checkout">
+                        <Header/>
                         <h2>checkout</h2>
                     </Route>
                     <Route path="/login">
+                        <Header/>
                         <h2> login</h2>
                     </Route>
                     {/* default case*/}
