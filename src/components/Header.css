@@ -41,9 +41,14 @@
 .header__option{
     display: flex;
     flex-direction: column;
-    padding: 0.3em;
+    margin: 0px 10px 0px 10px;
 }
 
 .header__option__lineOne{
     font-size: 10px;
+}
+
+.header__option__lineTwo{
+    font-size: 13px;
+    font-weight: 800;
 }
