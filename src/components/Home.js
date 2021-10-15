@@ -10,7 +10,7 @@ function Home() {
 
             <Product
             id = "1"
-            title = "ear buds"
+            title = "Ear Buds"
             price = {900}
             rating= {4}
             image="https://m.media-amazon.com/images/I/31LC-FBgpBL._AC_SY200_.jpg" />
