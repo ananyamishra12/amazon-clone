@@ -36,7 +36,7 @@ function Header() {
 
             {/*second link*/}
             
-            <Link to="/login" className="header__link">
+            <Link to="/checkout" className="header__link">
                 <div className= "header__option">
                     <span className="header__option__lineOne">Returns</span>
                     <span className="header__option__lineTwo">& Orders</span>
