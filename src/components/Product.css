@@ -6,20 +6,21 @@
 .product{
     display: flex;
     flex-direction: column;
-    max-height: 400px;
-    min-width: 100px;
+    max-height: 25;
+    min-width: (100/16)px;
     margin: 10px;
     padding: 50px;
     width: 100%;
     background-color: white;
     justify-content: center;
+    z-index: 1;
 }
 
 .product > img{
     height: 15em;
     width: 15em;
     /*object-fit: contain;*/
-    margin-bottom: 15px;
+    margin-bottom: 0.9375em;
     justify-self: center;
     margin-left: auto;
     margin-right: auto;
