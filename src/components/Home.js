@@ -6,7 +6,7 @@ function Home() {
     return (
         <div className="home">
             <img className="home__image"
-            src="https://m.media-amazon.com/images/I/71X3JrrpPwL._SX3000_.jpg" href="banner image" />
+            src="https://m.media-amazon.com/images/I/61D9w39orUL._SX3000_.jpg" href="banner image" />
             <div className="home__row">
                 <Product
                 id = "1"
