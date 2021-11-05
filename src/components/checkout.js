@@ -9,7 +9,27 @@ function Checkout() {
             <img 
                 className="checkout__ad" src= "https://easysell.in/wp-content/uploads/2021/05/banner_1_newStore.jpg" href="ad image"
             />
-            <h2>hi</h2>
+            {basket?.length=== 0 ?(
+                <div>
+                    <h2>Your basket is empty.</h2>
+                </div>
+            ): (
+                <div className="checkout__title">
+                    <h2>Your shopping basket</h2> 
+                    {basket.map(item=>(
+                        <CheckoutProduct
+                        id={item.id}
+                        title= {item.title}
+                        image= {item.image}
+                        price= {item.price}
+                        rating= {item.rating}
+                        />   
+                        ))
+
+                    }
+                </div>
+            )}
+                
         </div>
     )
 }
