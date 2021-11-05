@@ -1,7 +1,8 @@
 import React from 'react'
 import useStateValue from './StateProvider'
-import "./checkout.css";
+import "./Checkout.css";
 import CheckoutProduct from './CheckoutProduct';
+import Subtotal from './Subtotal';
 function Checkout() {
     const [{basket}, dispatch]= useStateValue();
     return (
@@ -10,8 +11,9 @@ function Checkout() {
                 className="checkout__ad" src= "https://easysell.in/wp-content/uploads/2021/05/banner_1_newStore.jpg" href="ad image"
             />
             {basket?.length=== 0 ?(
-                <div>
+                <div className="checkout__title">
                     <h2>Your basket is empty.</h2>
+                    <p>Please select items and add to basket to view them here.</p>
                 </div>
             ): (
                 <div className="checkout__title">
@@ -29,7 +31,11 @@ function Checkout() {
                     }
                 </div>
             )}
-                
+               {basket.length>0 && (
+                   <div className="checkout__right">
+                       <Subtotal />
+                   </div>
+               )} 
         </div>
     )
 }

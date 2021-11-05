@@ -3,3 +3,14 @@
     margin-bottom: 10px;
     height: 10em;
 }
+.checkout__title{
+    padding: 2em;
+    border-bottom: 1px solid lightgray;
+}
+
+.checkout{
+    
+    padding: 2em;
+    background-color: white;
+    
+}
