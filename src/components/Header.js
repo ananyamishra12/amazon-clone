@@ -2,10 +2,13 @@ import React from 'react'
 import logo from '../images/amazon-logo.png'
 import "./Header.css"
 import {Link} from 'react-router-dom'
+import  useStateValue  from './StateProvider'
+
 
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 function Header() {
+    const [{basket}] = useStateValue();
     return (
         <nav className="header">
             <Link to="/"> {/*we use the link tag instead of using href because using <link /> we dont have to refresh the page. */}
@@ -58,7 +61,7 @@ function Header() {
             <Link to="/checkout" className="header__link">
                 <div className="header__optionBasket">
                     <ShoppingBasketIcon className="header__optionBasketicon"></ShoppingBasketIcon>
-                    <span className="header__option__lineTwo header__basketCount" >0</span>
+                    <span className="header__option__lineTwo header__basketCount" >{basket.length}</span>
                 </div>
             
             </Link>
