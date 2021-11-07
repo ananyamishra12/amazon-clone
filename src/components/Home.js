@@ -49,7 +49,7 @@ function Home() {
                 <Product
                         id = "6"
                         title = "AmazonBasics 109 cm (43 inches) 4K Ultra HD Smart LED Fire TV AB43U20PS (Black)"
-                        price = {34,999}
+                        price = {34999}
                         rating= {5}
                         image="https://m.media-amazon.com/images/I/71AqQyCMmeL._SL1240_.jpg" />
 
