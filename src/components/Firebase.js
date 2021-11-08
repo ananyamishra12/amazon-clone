@@ -6,7 +6,7 @@ import { getAnalytics } from "firebase/analytics";
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
-
+import { getAuth, signInWithCustomToken } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBbu2HwF6hyY4C5Vem31NfMo8h9_2_5Qhc",
@@ -21,5 +21,5 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const auth= initializeApp.auth();
+const auth = getAuth();
 export {auth};

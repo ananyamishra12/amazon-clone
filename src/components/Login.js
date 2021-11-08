@@ -5,7 +5,7 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import {auth} from "./firebase"
 
-function Login () {
+export default function Login () {
     const [email,setEmail]= useState('');
     const [password,setPassword]= useState('');
     const login =event =>{
