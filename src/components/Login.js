@@ -1,11 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import './login.css'
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import {auth} from "./firebase"
 
-export default function () {
+function Login () {
+    const [email,setEmail]= useState('');
+    const [password,setPassword]= useState('');
     const login =event =>{
         event.preventDefault(); //stops the refresh
         const auth = getAuth();        
@@ -51,9 +53,9 @@ export default function () {
                 
                 <form>
                     <h5>E-mail</h5>
-                    <input type="text"/>
+                    <input value={email} onChange={event=> setEmail(event.target.value)} type="text"/>
                     <h5>Password</h5>
-                    <input type="password"/>
+                    <input value={password} onChange={event=> setPassword(event.target.value)} type="password"/>
                     <button onClick={login} type="submit">Sign in</button>
                 </form>
                 <p>
