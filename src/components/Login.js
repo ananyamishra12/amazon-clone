@@ -4,6 +4,7 @@ import './login.css'
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import {auth} from "./firebase"
+
 export default function () {
     const login =event =>{
         event.preventDefault(); //stops the refresh
