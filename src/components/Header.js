@@ -3,12 +3,17 @@ import logo from '../images/amazon-logo.png'
 import "./Header.css"
 import {Link} from 'react-router-dom'
 import  useStateValue  from './StateProvider'
-
+import { getAuth } from "firebase/auth";
 
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 function Header() {
-    const [{basket}] = useStateValue();
+    const [{basket, user}] = useStateValue();
+    const login=()=>{
+        if(user){
+            getAuth.signOut();
+        }
+    }
     return (
         <nav className="header">
             <Link to="/"> {/*we use the link tag instead of using href because using <link /> we dont have to refresh the page. */}
@@ -29,10 +34,10 @@ function Header() {
             
             {/*first link*/}
             
-            <Link to="/login" className="header__link">
-                <div className= "header__option">
-                    <span className="header__option__lineOne">Hello</span>
-                    <span className="header__option__lineTwo">Sign In</span>
+            <Link to={!user && "/login"} className="header__link">
+                <div onClick={login} className= "header__option">
+                    <span className="header__option__lineOne">Hello {user?.email}</span>
+                    <span className="header__option__lineTwo">{user? 'Sign Out' : 'Sign In'}</span>
                 </div>
             </Link>
             
